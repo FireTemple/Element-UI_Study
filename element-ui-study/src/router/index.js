@@ -1,6 +1,7 @@
 import VueRouter from "vue-router";
 import Vue from 'vue';
-const Home = () => import('')
+const Home = () => import('../view/Home')
+import Test from "../view/test/Test";
 Vue.use(VueRouter);
 
 const routes = [
@@ -9,14 +10,14 @@ const routes = [
         redirect: '/home'
     },
     {
-        path: 'home',
+        path: '/home',
         component: Home
     }
 ]
 
 let router = new VueRouter({
     routes,
-    model: 'history'
+    mode: 'history'
 });
 
 export default router;

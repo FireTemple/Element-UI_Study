@@ -1,16 +1,19 @@
 <template>
-    <div class="home">
-        <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
-        </el-row>
-    </div>
+  <div class="home">
+    <el-input placeholder="Please input" v-model="input"></el-input>
+    <p>{{input}}</p>
+  </div>
 </template>
 
 <script>
-
-    export default {
-        name: "Home"
+  export default {
+    name: "Home",
+    data() {
+      return {
+        input: ''
+      }
     }
+  }
 </script>
 
 <style scoped>
